@@ -1,0 +1,269 @@
+/* Carregando os dados 
+ * =============================== */
+
+.div-loader {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  transform: scale(5);
+}
+
+.c-loader {
+  animation: is-rotating 1s infinite;
+  border: 6px solid #e5e5e5;
+  border-radius: 50%;
+  border-top-color: black;
+  height: 30px;
+  width: 30px;
+}
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* SLides */
+.carousel .indicators .indicator-item {
+  cursor: pointer;
+  border: 1px solid black;
+  background-color: black;
+}
+/* CART
+  * ============================== */
+.Cart {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 350px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #e5e5e5;
+  transform: translateX(100%);
+  transition: transform 0.15s ease-in-out;
+}
+
+.Cart--open {
+  transform: translateX(0);
+}
+
+.Cart__close {
+  position: absolute;
+  right: 9px;
+  top: 8px;
+  font-size: 35px;
+  color: #999;
+  border: none;
+  background: transparent;
+  transition: transform 100ms ease;
+  cursor: pointer;
+}
+
+.Cart__header {
+  padding: 20px;
+  border-bottom: 1px solid #e5e5e5;
+  flex: 0 0 auto;
+  display: inline-block;
+}
+
+.Cart__line-items {
+  flex: 1 0 auto;
+  margin: 0;
+  padding: 20px;
+}
+
+.Cart__footer {
+  padding: 20px;
+  border-top: 1px solid #e5e5e5;
+  flex: 0 0 auto;
+}
+
+.Cart__checkout {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+}
+
+.Cart-info {
+  padding: 15px 20px 10px;
+}
+
+.Cart-info__total {
+  float: left;
+  text-transform: uppercase;
+}
+
+.Cart-info__small {
+  font-size: 11px;
+}
+
+.Cart-info__pricing {
+  float: right;
+}
+
+.pricing {
+  margin-left: 5px;
+  font-size: 16px;
+  color: black;
+}
+
+.centralizar_modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  bottom: 50%;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.elemento-pai {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/* Aqui começa o alinhamento */
+.elemento-pai:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.elemento-filho {
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+
+/* DRAWER
+  * ============================== */
+
+.Drawer {
+  z-index: 999;
+  position: fixed;
+  top: -10px;
+  bottom: 0;
+  left: -350px;
+  height: (100% + 10px);
+  width: 350px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #e5e5e5;
+  transform: translateX(0);
+  transition: transform 0.15s ease-in-out;
+}
+
+.Drawer--open {
+  transform: translateX(100%);
+}
+
+.Drawer__close {
+  position: absolute;
+  right: 9px;
+  top: 8px;
+  font-size: 35px;
+  color: #999;
+  border: none;
+  background: transparent;
+  transition: transform 100ms ease;
+  cursor: pointer;
+}
+
+.Drawer__header {
+  padding: 20px;
+  border-bottom: 1px solid #e5e5e5;
+  flex: 0 0 auto;
+  display: inline-block;
+}
+
+.Drawer__footer {
+  padding: 20px;
+  border-top: 1px solid #e5e5e5;
+  flex: 0 0 auto;
+}
+
+.Drawer-info {
+  padding: 15px 20px 10px;
+}
+
+.Drawer-info__small {
+  font-size: 11px;
+}
+
+/* Navegação entre as categorias */
+
+.navegacao ul li a {
+  color: black !important ;
+}
+.navegacao ul {
+  display: none;
+ 
+}
+
+.navegacao:hover ul {
+  max-width: 1500px;
+  display: block;
+  margin: auto;
+  position: fixed;
+  top: 150px;
+  color: black;
+  background-color: white;
+  left: 0;
+  right: 0;
+  min-height: 50px;
+}
+
+
+/*
+
+.menu-hover text {
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 0;
+  z-index: 999;
+  position: relative;
+}
+.menu-hover ul{
+  display: none;
+  transition: opacity .3s ease-out;
+  opacity: 0;
+}
+.menu-hover ul .row{
+  display: none;
+  transition: opacity .3s ease-out;
+  opacity: 0;
+}
+.menu-hover:hover ul .row{
+  opacity: 1;
+  transition: opacity .3s ease-out;
+  display: block;
+}
+.menu-hover:hover ul{
+  max-width: 1500px;
+  margin: auto;
+  margin-top:20px;
+  opacity: 1;
+  transition: opacity .3s ease-out;
+  display: block;
+  position: absolute;
+  color: black;
+  background-color: white;
+  left: 0;
+  top:0;
+  right: 0;
+}
+
+*/
